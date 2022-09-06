@@ -1,24 +1,20 @@
-package com.ust;
+package Abstract_program;
 
 public class Animal_2 {
-public void display() {
+public void displayInfo() {
+	System.out.println("im an animal");
 	
 }
 }
-class dog1 extends Animal_2{
-	public void display() {
-		System.out.println("iam a dog");
-		
-	}
-	public void printMessage() {
-		display();
-		super.display();
-		
+class Dog extends Animal_2{
+	public void displayInfo() {
+		super.displayInfo();
+		System.out.println("im an dog");
 	}
 }
-class Main7{
+class Main1{
 	public static void main(String[] args) {
-		dog dog1=new dog();
-		dog1.printMessage();
+		Dog d1=new Dog();
+		d1.displayInfo();
 	}
 }
