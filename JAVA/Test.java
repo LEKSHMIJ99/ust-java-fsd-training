@@ -1,21 +1,25 @@
-package Abstract_program;
+package Day5;
 
-public class Test {
-	int a;
-	int b;
-	Test(){
-		this(10,20);
-		System.out.println("Inside default constructor\n");
-	}
-	Test(int a, int b)
+public class Test<T, U> {
+	T obj1;
+	U obj2;
+	Test(T obj1,U obj2)
 	{
-		this.a=a;
-		this.b=b;
-				System.out.println("inside parametrised constructor");
+		this.obj1=obj1;
+		this.obj2=obj2;
 	}
-	public static void main(String[] args)
+	public void print()
 	{
-		Test object=new Test();
+		System.out.println(obj1);
+		System.out.println(obj2);
 	}
 
 }
+class Main7{
+	public static void main(String[] args) {
+		Test<String,Integer>obj=new Test<String,Integer>("GfG",15);
+		obj.print();
+	}
+}
+
+	
