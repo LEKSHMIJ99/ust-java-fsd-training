@@ -1,77 +1,54 @@
-package com.ust;
+package Sba;
 
-import java.util.Scanner;
+interface Employee2 {
+	
 
-public class Employee2 extends Engineer{
-	public static void main(String args[]) {
-		Engineer a = new Engineer();
-		
-		System.out.println("enter salary: ");
-		float y = input.nextFloat();
-		a.adddata();
-		a.salary(y);
-		a.display();
-	}
+
+String name="hari";
+int emp_id=1234;
+abstract float calculateSalary();
+abstract void fetchDepartment();
+}
+class Engineer2 extends Employee{
+float CalculateSalary() {
+	return 4.5f;
+	
+}
+void fetchDepartment() {
+	System.out.println("Delivery");
+	
+}
+float calculateSalary() {
+	// TODO Auto-generated method stub
+	return 0;
 }
 
-class Details {
-	
-	int uid;
-	String name;
-	long number;
-	String email;
-	String designation;
-	String worklocation;
-	float salary;
-	static Scanner input = new Scanner(System.in);
-	
-	void adddata() {
-		
-		System.out.print("UID: ");
-		this.uid = input.nextInt();
-		System.out.print("NAME: ");
-		this.name = input.next();
-		System.out.print("NUMBER: ");
-		this.number = input.nextLong();
-		System.out.print("EMAIL: ");
-		this.email = input.next();
-		System.out.print("WORK LOCATION: ");
-		this.worklocation = input.next();
-//		System.out.print("SALARY: ");
-//		this.salary = input.nextInt();
-		
-	}
-	
-
-	void salary(int x) {
-		this.salary = x;
-		System.out.println("salary method woth parameter:int");
-	}
-	
-	void salary(float x) {
-		this.salary = x;
-		System.out.println("salary method with parameter:float");
-		
-	}
-	
-	void display() {
-		System.out.println("UID :" +this.uid);
-		System.out.println("NAME :" +this.name);
-		System.out.println("NUMBER :" +this.number);
-		System.out.println("EMAIL :" +this.email);
-		System.out.println("WORKLOCATION :" +this.worklocation);
-		System.out.println("SALARY :"+this.salary);
-	}
 
 }
-class Engineer extends Details{
+class Doctor2 extends Employee{
+float calculateSalary() {
 	
-	void salary(float x) {
-		super.salary(x);;
-		this.salary = x;
-		System.out.println("salary method with parameter:float Engineer class"
-				+ "");
-		
-	}
+	return 6.5f;
 }
+void fetchDepartment() {
+	System.out.println("Cardiology");
+	
+}
+}
+class Main00{
+public static void main(String[] args) {
+	//Employee E1=new Employee();
+	Engineer e=new Engineer();
+	Doctor d=new Doctor();
+	System.out.println(e.name);
+	System.out.println(e.emp_id);
+	System.out.println(e.calculateSalary());
+	e.fetchDepartment();
+	System.out.println(d.name);
+	System.out.println(d.calculateSalary());
+	d.fetchDepartment();
+}
+}
+
+
 
