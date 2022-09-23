@@ -1,1 +1,16 @@
 
+                                                                            JAVA8
+LAMBDA EXPRESSIONS: They are similar to methods,but they do not need a name and they can be implemented right in the body of the method.They have a parameter and list argument with a body 
+METHOD REFERENCES:  Used to point/refer to the functional interface.There are references to static methods,instance methods,constructor.
+
+FUNCTIONAL INTERFACES: These are the interfaces which exactly has only one abstract method.
+DEFAULT AND STATIC METHODS: Static interface method which belongs to the interface only.we can write implementation of the method in interface itself.
+ForEach:It performs the given action for each element of the iterable .
+
+OPTIONAL:Class newely introduced as a part of java8 basically to deal with nullpointerexception.
+COLLECTORS:It performs reduction operations,such as accumulating elements into collections.
+
+STREAM: Used to process collections of objects.It consists of string bulider and stream buffer.string builder is similar to string buffer,but stringbuilder APIs are not synchronised.String buffer is not mutable in nature and also the methods are synchronised.
+
+
+
