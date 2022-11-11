@@ -8,7 +8,6 @@ import java.util.Set;
 @Data
 @Table(name ="student_ustbatch_identitymappedbytest")
 public class Student {
-
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int studentId;
